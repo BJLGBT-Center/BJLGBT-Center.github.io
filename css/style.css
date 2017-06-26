@@ -38,17 +38,17 @@ html,body {
 #loader{
 	width: 100%;
 	position: absolute;
-	top: 30%;
+	top: 40vh;
 }
 #loader_box{
-	width: 50px;
+	width: 20vh;
 	margin: 0 auto;
 	-webkit-transform-style: -webkit-preserve-3d;
 			transform-style: preserve-3d;
 }
 #loader_transform{
-	width: 50px;
-	height: 50px;
+	width: 20vh;
+	height: 20vh;
 	background: url("../img/logo/logo.png") no-repeat;
 	background-size: contain;
 	animation: 2s loader linear infinite;
