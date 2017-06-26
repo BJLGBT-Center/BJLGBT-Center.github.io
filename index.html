@@ -10,6 +10,44 @@
 <title></title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
+    <script>
+        <!--图片预加载-->
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        });
+        function setload1(){
+            var data = [];//用来存放所有的图片
+            var load = document.getElementById('bg');
+            var logoText = document.getElementById('load_text');
+
+            for(var attr in imgData){
+                //for in循环数组键值对,把所有图片放在一个数组里
+                data = data.concat(imgData[attr]);
+            }
+            var num = 0;//计算加载进来图片个数
+            var len = data.length;
+            for(var i=0;i<len;i++){
+                var img = new Image();
+                img.src = data[i];//把每张图片都从服务器下载到本地
+                img.onload = function(){
+                    num++;
+                    var per = Math.floor(num/len*100);
+                    logoText.innerHTML = '已穿越' + per + '%';
+                    if( num == len ){
+                        MTween({
+                            el: load,
+                            target: {opacity:0},
+                            time: 1000,
+                            type: 'easeOut',
+                            callBack: function(){
+                                document.body.removeChild(load);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="bg">
@@ -17,8 +55,14 @@
         <div id="loader">
             <div id="loader_box">
                 <div id="loader_transform"></div>
-                <div id="load_text">...穿越中...</div>
+                <div id="load_text">已穿越0%</div>
             </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="part1">
+            <img src="img/part/part-1.png">
         </div>
     </div>
 
