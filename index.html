@@ -32,7 +32,7 @@
                 img.onload = function(){
                     num++;
                     var per = Math.floor(num/len*100);
-                    logoText.innerHTML = '已穿越' + per + '%';
+                    logoText.innerHTML = '穿越' + per + '%';
                     if( num == len ){
                         MTween({
                             el: load,
@@ -55,7 +55,7 @@
         <div id="loader">
             <div id="loader_box">
                 <div id="loader_transform"></div>
-                <div id="load_text">已穿越0%</div>
+                <div id="load_text">穿越0%</div>
             </div>
         </div>
     </div>
@@ -64,6 +64,7 @@
         <div id="part1">
             <img src="img/part/part-1.png">
         </div>
+        <img src="img/test.JPG">
     </div>
 
    	
