@@ -100,7 +100,14 @@ html,body {
 #part2{
 	position: relative;
 }
-#part2 img{
+#part2 img:nth-child(2){
 	position: absolute;
 	top: 0;
+}
+#part2 img:last-of-type{
+	width: 4vw;
+	position: absolute;
+	right: 3vw;
+	bottom: 3vw;
+	animation: 1s shine linear infinite;
 }
