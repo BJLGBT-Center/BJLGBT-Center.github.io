@@ -107,7 +107,7 @@ html,body {
 #part2 img:last-of-type{
 	width: 4vw;
 	position: absolute;
-	right: 3vw;
-	bottom: 3vw;
+	right: 6vw;
+	bottom: 6vw;
 	animation: 1s shine linear infinite;
 }
