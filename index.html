@@ -10,12 +10,13 @@
 <title></title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <script>
         <!--图片预加载-->
         document.addEventListener('touchstart',function(ev){
             ev.preventDefault();
         });
-        function setload1(){
+        function setload(){
             var data = [];//用来存放所有的图片
             var load = document.getElementById('bg');
             var logoText = document.getElementById('load_text');
@@ -32,7 +33,7 @@
                 img.onload = function(){
                     num++;
                     var per = Math.floor(num/len*100);
-                    logoText.innerHTML = '穿越' + per + '%';
+                    logoText.innerHTML = '正在回到6月11日 ' + per + '%';
                     if( num == len ){
                         MTween({
                             el: load,
@@ -47,6 +48,18 @@
                 }
             }
         }
+        window.onload = function(){
+            var figer = document.getElementById("figer");
+            var text = document.getElementById("load_text");
+            var logo = document.getElementById("loader_transform");
+
+            figer.addEventListener("touchstart",function(){
+                figer.className = "hide";
+                logo.className = "loader";
+                text.className = "";
+                setload();
+            })
+        }
     </script>
 </head>
 <body>
@@ -55,7 +68,8 @@
         <div id="loader">
             <div id="loader_box">
                 <div id="loader_transform"></div>
-                <div id="load_text">穿越0%</div>
+                <div id="figer"></div>
+                <div id="load_text" class="hide">正在回到6月11日 0%</div>
             </div>
         </div>
     </div>
@@ -64,12 +78,21 @@
         <div id="part1">
             <img src="img/part/part-1.png">
         </div>
-        <img src="img/test.JPG">
+        <div id="part2">
+            <img src="img/part/part-2-1.png">
+            <img src="img/part/part-2-2.png" style="opacity: 0">
+        </div>
     </div>
 
-   	
+
+
+
+
+
+
 <script src="js/imgData.js" charset="utf-8"></script>
 <script src="js/m.Tween.js" charset="utf-8"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
 <script src="js/index.js" charset="utf-8"></script>
 
 </body>

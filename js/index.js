@@ -2,9 +2,7 @@
  	hizhongxu@gmail.com
     https://github.com/ZhongxuYang
  */
-(function(){
-	setload1();
-})();
+
 
 //星空
 //var canvas = document.getElementById('canvas'),
@@ -196,7 +194,53 @@
 	executeFrame();
 })();
 
+(function () {
+	part2();
+	function part2(){
+		var part2 = document.getElementById("part2");
+		var imgs = part2.getElementsByTagName("img");
 
+		function exchange () {
+			part2.removeEventListener("touchstart",exchange);
+			if(imgs[1].style.opacity!=1){
+				MTween({
+					el: imgs[0],
+					target: {opacity:0},
+					time: 1000,
+					type: 'easeOut'
+				});
+				console.log(imgs[1]);
+				MTween({
+					el: imgs[1],
+					target: {opacity:100},
+					time: 1000,
+					type: 'easeOut',
+					callBack: function(){
+						part2.addEventListener("touchstart",exchange );
+					}
+				});
+			}else{
+				MTween({
+					el: imgs[1],
+					target: {opacity:0},
+					time: 1000,
+					type: 'easeOut'
+				});
+				MTween({
+					el: imgs[0],
+					target: {opacity:100},
+					time: 1000,
+					type: 'easeOut',
+					callBack: function(){
+						part2.addEventListener("touchstart",exchange );
+					}
+				});
+			}
+		};
+
+		part2.addEventListener("touchstart",exchange );
+	}
+})();
 ///*---------load1渐隐,logo2显示----------*/
 //function anmt1(){
 //	/*  创建logo2  */

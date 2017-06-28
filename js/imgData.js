@@ -3,9 +3,8 @@ var imgData = {
     "img/logo/logo.png"
   ],
   part:[
-      "img/part/part-1.png"
-  ],
-  test:[
-      "img/test.JPG"
+      "img/part/part-1.png",
+      "img/part/part-2-1.png",
+      "img/part/part-2-2.png"
   ]
 }
