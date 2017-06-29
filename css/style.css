@@ -15,14 +15,6 @@
 		-webkit-transform: rotateX(360deg) rotateY(360deg);
 				transform: rotateX(360deg) rotateY(360deg);
 	}
-	/*50% {*/
-		/*-webkit-transform: rotateY(180deg);*/
-				/*transform: rotateY(180deg);*/
-	/*}*/
-	/*100% {*/
-		/*-webkit-transform: rotateY(360deg);*/
-				/*transform: rotateY(360deg);*/
-	/*}*/
 }
 @keyframes shine {
 	50% {
@@ -33,10 +25,8 @@
 
 html,body {
 	width: 100%;
-	/*height: 100%;*/
 	background: #EEE1D8;
-	/*overflow-x: hidden;*/
-	overflow-y: scroll;
+	overflow-x: hidden;
 }
 .show{
 	display: block;
