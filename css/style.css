@@ -36,6 +36,7 @@ html,body {
 	/*height: 100%;*/
 	background: #EEE1D8;
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 .show{
 	display: block;
@@ -82,14 +83,14 @@ html,body {
 	background: url("../img/logo/logo.png") no-repeat;
 	background-size: contain;
 }
-#figer{
-	width: 15vw;
-	height: 15vw;
-	margin: 0 auto;
-	background: url("../img/logo/figer.png") center no-repeat;
-	background-size: contain;
-	animation: 1s shine linear infinite;
-}
+/*#figer{*/
+	/*width: 15vw;*/
+	/*height: 15vw;*/
+	/*margin: 0 auto;*/
+	/*background: url("../img/logo/figer.png") center no-repeat;*/
+	/*background-size: contain;*/
+	/*animation: 1s shine linear infinite;*/
+/*}*/
 #load_text{
 	text-align: center;
 	color: #fff;
