@@ -155,12 +155,13 @@ function getPageScroll() {
 };
 
 (function () {
-
+	var pic = document.getElementById("pics");
+	var divs = pic.getElementsByTagName("div");
 	document.addEventListener("touchmove", function () {
-		var imgs = document.getElementsByClassName("translate");
-		for(var i=0;i<imgs.length;i++){
-			if(imgs[i].getBoundingClientRect().top < getPageScroll()[1] + document.body.offsetHeight){
-				imgs[i].className = "";
+		for(var i=0;i<divs.length;i++){
+			if(divs[i].getBoundingClientRect().top <  window.innerHeight){
+				console.log(divs[i].getBoundingClientRect().top);
+				divs[i].className = "";
 			}
 		}
 	})
