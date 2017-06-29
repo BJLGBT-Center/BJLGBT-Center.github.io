@@ -155,9 +155,9 @@ function getPageScroll() {
 };
 
 (function () {
-	var imgs = document.getElementsByClassName("translate");
 
 	document.addEventListener("touchmove", function () {
+		var imgs = document.getElementsByClassName("translate");
 		for(var i=0;i<imgs.length;i++){
 			if(imgs[i].getBoundingClientRect().top < getPageScroll()[1] + document.body.offsetHeight){
 				imgs[i].className = "";
