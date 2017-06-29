@@ -120,3 +120,6 @@ html,body {
 	width: 60vw;
 	border-radius: 2.5vw;
 }
+#footer img{
+	width: 100%;
+}

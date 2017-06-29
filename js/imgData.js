@@ -5,7 +5,8 @@ var imgData = {
     part:[
         "img/part/part-1.png",
         "img/part/part-2-1.png",
-        "img/part/part-2-2.png"
+        "img/part/part-2-2.png",
+        "img/part/footer.png"
     ],
     pic:[
         "img/pic/1.png",
