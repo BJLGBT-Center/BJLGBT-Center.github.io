@@ -49,11 +49,13 @@
             }
         }
         window.onload = function(){
+            var box = document.getElementById("box");
             var figer = document.getElementById("figer");
             var text = document.getElementById("load_text");
             var logo = document.getElementById("loader_transform");
 
             figer.addEventListener("touchstart",function(){
+                box.className = "";
                 figer.className = "hide";
                 logo.className = "loader";
                 text.className = "";
@@ -74,22 +76,93 @@
         </div>
     </div>
 
-    <div id="content">
-        <div id="part1">
-            <img src="img/part/part-1.png">
+    <div id="box" class="hide">
+        <div id="content">
+            <div id="part1">
+                <img src="img/part/part-1.png">
+            </div>
+            <div id="part2">
+                <img src="img/part/part-2-1.png">
+                <img src="img/part/part-2-2.png" style="opacity: 0">
+                <img src="img/logo/figer.png">
+            </div>
         </div>
-        <div id="part2">
-            <img src="img/part/part-2-1.png">
-            <img src="img/part/part-2-2.png" style="opacity: 0">
-            <img src="img/logo/figer.png">
+
+        <div id="pics">
+            <div class="translate">
+                <img src="img/pic/1.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/2.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/3.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/4.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/5.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/6.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/7.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/8.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/9.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/10.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/11.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/12.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/13.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/14.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/15.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/16.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/17.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/18.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/19.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/20.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/21.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/22.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/23.png">
+            </div>
+            <div class="translate">
+                <img src="img/pic/24.png">
+            </div>
         </div>
     </div>
-
-
-
-
-
-
 
 <script src="js/imgData.js" charset="utf-8"></script>
 <script src="js/m.Tween.js" charset="utf-8"></script>
