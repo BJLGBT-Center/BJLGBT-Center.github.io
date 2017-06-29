@@ -164,5 +164,13 @@ function getPageScroll() {
 				divs[i].className = "";
 			}
 		}
+		setTimeout(function () {
+			for(var i=0;i<divs.length;i++){
+				if(divs[i].getBoundingClientRect().top <  window.innerHeight){
+					console.log(divs[i].getBoundingClientRect().top);
+					divs[i].className = "";
+				}
+			}
+		},1000);
 	})
 })();
